@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(16px, 70px);
+}
+
+#timer{
+    font-size: 50px;
+    font-family: monospace;
+    font-weight: 500;
+}
+
+#setting{
+    font-size: 30px;
+    font-weight: 900;
+    padding: 0px;
+    background: none ;
+    border: none;
+    transform: translateY(-4px);
+    margin-left: 10px;
+    transition: ease-in-out 0.5s;
+}
+
+#image{
+    position: absolute;
+    transform: translateY(-80px);
+}
+
+#image > img{
+    width: 100px;
+    z-index: 1;
+}
+
+#setting:hover{
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+#image::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    font-size: 0px;
+    background: rgb(233, 70, 6);
+    width: 150px;
+    height: 150px;
+    transform: translate(-120px, -50px);
+    border-radius: 100px;
+}
+
+.button{
+    transform: translateY(70px);
+    margin-top: 40px;
+}
+
+.button > button{
+    padding: 10px;
+    width: 80px;
+    background: rgb(27, 85, 212);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.button > button:hover{
+    cursor: pointer;
+    background: rgb(21, 63, 155);
+}

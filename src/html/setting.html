@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Hello from Electron renderer!</title>
+    <link rel="stylesheet" href="../css/setting.css">
+    <script defer src="../js/pomodoro-setting.js"></script> 
+  </head>
+  <body>
+    <main>
+        <nav id="sidebar">
+            <ul>
+                <li>TIMER</li>
+            </ul>
+        </nav>
+        <div id="container">
+            <div id="setting">
+                <div>
+                    <label for="restTimer">Rest Timer</label>
+                    <input name="restTimer" id="restTimer" /> 
+                </div>
+                <div>
+                    <label for="workTimer" type="number">Work Timer</label>
+                    <input name="workTimer" id="workTimer" type="number"/> 
+                </div>
+            </div>
+            <div id="button">
+                <button id="close">Close</button>
+                <button id="apply">apply</button>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
